@@ -34,3 +34,5 @@ group :test do
   gem "webdrivers"
   gem "i18n"
 end
+
+gem "ruby-openai"
