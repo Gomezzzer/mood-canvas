@@ -6,7 +6,7 @@
   <title>Random Photo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Roboto, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f0f0f0;
@@ -55,18 +55,16 @@
 </head>
 <body>
 
-  
-   <header>
+  <header>
     <h1>Randomly Generated Photo</h1>
   </header>
 
-  <main style="max-width: 600px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: hidden;">
+  <main style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 5px box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: hidden;">
     <img src="<%= @random_photo_url %>" alt="Random Photo" style="width: 100%; height: auto; border-radius: 5px;">
     <p>Click the button below for another random photo:</p>
     <a href="/random_photo" class="btn">Generate Another Random Photo</a>
   </main>
 
-  
 
   <footer>
     <p>Powered by Ruby Sinatra</p>
