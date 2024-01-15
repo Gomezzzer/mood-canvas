@@ -22,26 +22,28 @@
     main {
       margin: 20px auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: #fff; 
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     img {
-      max-width: 40%; /* Adjust the percentage as needed */
+      max-width: 80%; /* Adjust the percentage as needed */
       height: auto;
-      border-radius: 5px;
+      border-radius: 10px;
       margin: 10px 0; /* Add some margin for spacing */
     }
 
     .btn {
       display: inline-block;
+      width: 25%;
       padding: 10px 20px;
-      background-color: #007bff;
+      background-color: #6488ea;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
       margin-top: 20px;
+      margin-left: 17rem;
     }
 
     footer {
@@ -51,20 +53,26 @@
       background-color: #999;
       color: #fff;
     }
+  @media screen and (max-width: 420px) {
+     .btn {
+       margin-left: 6.5rem;
+     } 
+  }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Randomly Generated Photo</h1>
+    <h1>Random Snap</h1>
   </header>
 
-  <main style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 5px box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: hidden;">
-    <img src="<%= @random_photo_url %>" alt="Random Photo" style="width: 100%; height: auto; border-radius: 5px;">
+ <main style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); overflow: hidden; display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px;">
+    <div style="display: flex; align-items: center; justify-content: center; height: 300px; border-radius: 5px; overflow: hidden;">
+      <img src="<%= @random_photo_url %>" alt="Random Photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+    </div>
     <p>Click the button below for another random photo:</p>
-    <a href="/random_photo" class="btn">Generate Another Random Photo</a>
+    <a href="/random_photo" class="btn">Click Me</a>
   </main>
-
 
   <footer>
     <p>Powered by Ruby Sinatra</p>
