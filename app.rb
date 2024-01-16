@@ -7,7 +7,6 @@ end
 
 
 get '/random_photo' do
-  # Logic to generate and display a random photo
   user_input = params[:user_input]
   api_key = 'ART_API_KEY'
   url = URI.parse("https://source.unsplash.com/random?api_key=#{api_key}")
