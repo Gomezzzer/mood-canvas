@@ -17,14 +17,14 @@ h1 {
   margin-left: 13rem; 
   -webkit-tap-highlight-color: transparent;
 }
-
+/*
 header {
   background-color: #fff; 
   color: #999;
   padding: 1em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+*/
 main {
   max-width: 800px;
   margin: 20px auto;
