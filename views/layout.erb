@@ -55,33 +55,28 @@
 		ScrollReveal().reveal('h1', { delay: 700, origin: 'left' });
 		ScrollReveal().reveal('a', { delay: 400, origin: 'right'});
 
-  document.addEventListener('DOMContentLoaded', function() {
-  const textElement = document.getElementById('animated-text');
-  const textContent = textElement.innerText;
-  textElement.innerText = '';
+    document.addEventListener('DOMContentLoaded', function() {
+    const textElement = document.getElementById('animated-text');
+    const textContent = textElement.innerText;
+    textElement.innerText = '';
 
-  function animateText() {
-    const words = textContent.split(/\s+/); // Use regular expression to split by spaces
-    let i = 0;
+    function animateText() {
+      const words = textContent.split(/\s+/); // Use regular expression to split by spaces
+      let i = 0;
 
-    function printWord() {
-      if (i < words.length) {
-        textElement.innerHTML += words[i] + ' ';
-        i++;
-        setTimeout(printWord, 200); // Adjust the delay (in milliseconds) between words
+      function printWord() {
+        if (i < words.length) {
+          textElement.innerHTML += words[i] + ' ';
+          i++;
+          setTimeout(printWord, 200); // Adjust the delay (in milliseconds) between words
+        }
       }
+
+      printWord();
     }
 
-    printWord();
-  }
-
-  animateText();
-});
-
-
-
-
-
+    animateText();
+  });
 
    </script>
   </body>
