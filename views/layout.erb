@@ -20,6 +20,12 @@
     <!-- Connect Bootstrap JavaScript and its dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
+      <!-- script
+    ================================================== -->   
+    
+    <script src="js/pace.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 
   </head>
 
@@ -31,6 +37,23 @@
       <h1>Random Snap</h1> 
       </div> 
     </header>
+  
     <%= yield %>
+    
+    
+     <script>
+	  ScrollReveal({
+		// reset: true,  
+		 distance: '60px',
+		 duration: 2500,
+		 delay: 400
+		});
+
+		
+		ScrollReveal().reveal('.img-container', { delay: 600, origin: 'bottom' });
+		ScrollReveal().reveal('h3', { delay: 800, origin: 'right' });
+		ScrollReveal().reveal('h1', { delay: 700, origin: 'left' });
+		ScrollReveal().reveal('a', { delay: 400, origin: 'right', interval: 300 });
+   </script>
   </body>
 </html>
