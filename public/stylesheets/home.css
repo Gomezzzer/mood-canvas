@@ -43,6 +43,8 @@ main {
 
 #animated-text-container {
   white-space: pre-wrap;
+  max-width: 600px; 
+  height: 172px; 
 }
 
 .btn {
