@@ -23,7 +23,7 @@
       <!-- script
     ================================================== -->   
     
-    <script src="js/pace.min.js"></script>
+    <script src="script.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
 
@@ -53,7 +53,36 @@
 		ScrollReveal().reveal('.img-container', { delay: 600, origin: 'bottom' });
 		ScrollReveal().reveal('h3', { delay: 800, origin: 'right' });
 		ScrollReveal().reveal('h1', { delay: 700, origin: 'left' });
-		ScrollReveal().reveal('a', { delay: 400, origin: 'right', interval: 300 });
+		ScrollReveal().reveal('a', { delay: 400, origin: 'right'});
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const textElement = document.getElementById('animated-text');
+  const textContent = textElement.innerText;
+  textElement.innerText = '';
+
+  function animateText() {
+    const words = textContent.split(/\s+/); // Use regular expression to split by spaces
+    let i = 0;
+
+    function printWord() {
+      if (i < words.length) {
+        textElement.innerHTML += words[i] + ' ';
+        i++;
+        setTimeout(printWord, 200); // Adjust the delay (in milliseconds) between words
+      }
+    }
+
+    printWord();
+  }
+
+  animateText();
+});
+
+
+
+
+
+
    </script>
   </body>
 </html>

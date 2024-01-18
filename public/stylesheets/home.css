@@ -37,6 +37,18 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#animated-text {
+  
+  overflow: hidden;
+   /* Add a border for the typing effect */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+#animated-text-container {
+  white-space: pre-wrap;
+  /* Additional styling if needed */
+}
+
 .btn {
   display: inline-block;
   width: 25%;
